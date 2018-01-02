@@ -89,6 +89,8 @@ char *mem_name[3] = {"Static","Heap","Stack"};
 MAIN_RETURN_TYPE main(void) {
 	int argc=0;
 	char *argv[1];
+#elif !defined(CONFIG_BUILD_KERNEL)
+MAIN_RETURN_TYPE coremark_main(int argc, char *argv[]) {
 #else
 MAIN_RETURN_TYPE main(int argc, char *argv[]) {
 #endif

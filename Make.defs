@@ -33,25 +33,6 @@
 #
 ############################################################################
 
--include $(TOPDIR)/Make.defs
-
-APPNAME = coremark
-PRIORITY = SCHED_PRIORITY_DEFAULT
-STACKSIZE = 4096
-
-ASRCS =
-CSRCS =
-MAINSRC := core_list_join.c \
-		   core_main.c \
-		   core_matrix.c \
-		   core_state.c \
-		   core_util.c \
-		   nuttx/core_portme.c
-
-CFLAGS_STR := "$(CFLAGS)"
-CFLAGS += -DFLAGS_STR=\"$(CFLAGS_STR)\"
-CFLAGS += ${shell $(INCDIR) $(INCDIROPT) "$(CC)" $(TOPDIR)/$(APPDIR)/external/tools/coremark/nuttx}
-
-PROGNAME = coremark$(EXEEXT)
-
-include $(APPDIR)/Application.mk
+ifeq ($(CONFIG_EXTERNAL_TOOLS_COREMARK),y)
+CONFIGURED_APPS += external/tools/coremark
+endif
