@@ -50,7 +50,7 @@ MAINSRC := core_list_join.c \
 
 CFLAGS_STR := "$(CFLAGS)"
 CFLAGS += -DFLAGS_STR=\"$(CFLAGS_STR)\"
-CFLAGS += ${shell $(INCDIR) $(INCDIROPT) "$(CC)" $(TOPDIR)/$(APPDIR)/external/tools/coremark/nuttx}
+CFLAGS += ${shell $(INCDIR) $(INCDIROPT) "$(CC)" $(APPDIR)/external/tools/coremark/nuttx}
 
 PROGNAME = coremark$(EXEEXT)
 
