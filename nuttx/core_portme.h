@@ -102,11 +102,11 @@ typedef clock_t CORE_TICKS;
  #define COMPILER_FLAGS FLAGS_STR /* "Please put compiler flags here (e.g. -o3)" */
 #endif
 #ifndef MEM_LOCATION
- #if CONFIG_EXTERNAL_TOOLS_COREMARK_MEM_METHOD == MEM_MALLOC
+ #if CONFIG_TOOLS_COREMARK_MEM_METHOD == MEM_MALLOC
   #define MEM_LOCATION "MALLOC"
- #elif CONFIG_EXTERNAL_TOOLS_COREMARK_MEM_METHOD == MEM_STATIC
+ #elif CONFIG_TOOLS_COREMARK_MEM_METHOD == MEM_STATIC
   #define MEM_LOCATION "STATIC"
- #elif CONFIG_EXTERNAL_TOOLS_COREMARK_MEM_METHOD == MEM_STACK
+ #elif CONFIG_TOOLS_COREMARK_MEM_METHOD == MEM_STACK
   #define MEM_LOCATION "STACK"
  #endif
 #endif
@@ -140,7 +140,7 @@ typedef size_t ee_size_t;
 	SEED_VOLATILE - from volatile variables.
 */
 #ifndef SEED_METHOD
-#define SEED_METHOD CONFIG_EXTERNAL_TOOLS_COREMARK_SEED_METHOD
+#define SEED_METHOD CONFIG_TOOLS_COREMARK_SEED_METHOD
 #endif
 
 /* Configuration: MEM_METHOD
@@ -152,7 +152,7 @@ typedef size_t ee_size_t;
 	MEM_STACK - to allocate the data block on the stack (NYI).
 */
 #ifndef MEM_METHOD
-#define MEM_METHOD CONFIG_EXTERNAL_TOOLS_COREMARK_MEM_METHOD
+#define MEM_METHOD CONFIG_TOOLS_COREMARK_MEM_METHOD
 #endif
 
 /* Configuration: MULTITHREAD
@@ -171,7 +171,7 @@ typedef size_t ee_size_t;
 	to fit a particular architecture.
 */
 #ifndef MULTITHREAD
-#define MULTITHREAD CONFIG_EXTERNAL_TOOLS_COREMARK_MULTITHREAD
+#define MULTITHREAD CONFIG_TOOLS_COREMARK_MULTITHREAD
 #endif
 
 /* Configuration: USE_PTHREAD
@@ -258,21 +258,21 @@ void portable_fini(core_portable *p);
 #define PROFILE_RUN 2
 
 #ifndef RUN_MODE
-#define RUN_MODE CONFIG_EXTERNAL_TOOLS_COREMARK_RUN_METHOD
+#define RUN_MODE CONFIG_TOOLS_COREMARK_RUN_METHOD
 #endif
 
 /* Configuration: ITERATIONS
 	Define for determine the number of iterations
 */
 #ifndef ITERATIONS
-#define ITERATIONS CONFIG_EXTERNAL_TOOLS_COREMARK_ITERATIONS
+#define ITERATIONS CONFIG_TOOLS_COREMARK_ITERATIONS
 #endif
 
 /* Configuration: CORE_DEBUG
 	Defines debug mode.
 */
 #ifndef CORE_DEBUG
-#define CORE_DEBUG CONFIG_EXTERNAL_TOOLS_COREMARK_DEBUG
+#define CORE_DEBUG CONFIG_TOOLS_COREMARK_DEBUG
 #endif
 
 #define COMPILER_REQUIRES_SORT_RETURN 0

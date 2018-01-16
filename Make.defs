@@ -33,6 +33,6 @@
 #
 ############################################################################
 
-ifeq ($(CONFIG_EXTERNAL_TOOLS_COREMARK),y)
+ifeq ($(CONFIG_TOOLS_COREMARK),y)
 CONFIGURED_APPS += external/tools/coremark
 endif
