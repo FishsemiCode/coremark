@@ -39,14 +39,12 @@ APPNAME = coremark
 PRIORITY = SCHED_PRIORITY_DEFAULT
 STACKSIZE = 4096
 
-ASRCS =
-CSRCS =
-MAINSRC := core_list_join.c \
-		   core_main.c \
-		   core_matrix.c \
-		   core_state.c \
-		   core_util.c \
-		   nuttx/core_portme.c
+CSRCS   := core_list_join.c \
+	   core_matrix.c \
+	   core_state.c \
+	   core_util.c \
+	   nuttx/core_portme.c
+MAINSRC := core_main.c
 
 CFLAGS_STR := "$(CFLAGS)"
 CFLAGS += -DFLAGS_STR=\"$(CFLAGS_STR)\"
