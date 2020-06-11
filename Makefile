@@ -49,6 +49,6 @@ MAINSRC := core_main.c
 CFLAGS += ${shell $(DEFINE) "$(CC)" crc16=cm_crc16}
 CFLAGS += ${shell $(INCDIR) $(INCDIROPT) "$(CC)" $(APPDIR)/external/tools/coremark/nuttx}
 
-PROGNAME = coremark$(EXEEXT)
+PROGNAME = coremark
 
 include $(APPDIR)/Application.mk

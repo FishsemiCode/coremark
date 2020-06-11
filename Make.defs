@@ -34,5 +34,5 @@
 ############################################################################
 
 ifeq ($(CONFIG_TOOLS_COREMARK),y)
-CONFIGURED_APPS += external/tools/coremark
+CONFIGURED_APPS += $(APPDIR)/external/tools/coremark
 endif
